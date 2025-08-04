@@ -16,7 +16,7 @@ import Projects from "./pages/Projects";
 import Event from "./pages/Event";
 import Navigation from "./components/Navigation";
 import Certifications from "./pages/Certifications";
-import CircleDesign from "./pages/CircleDesign";
+
 const { Header, Content, Footer, Sider } = Layout;
 
 const App = () => {
@@ -56,7 +56,7 @@ const App = () => {
       <Event />
       <Contact />
     </div>
-    <CircleDesign/>
+  
     </div>
   );
 };
