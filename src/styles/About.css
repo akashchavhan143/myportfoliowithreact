@@ -1,0 +1,71 @@
+.about-section {
+  padding-top: 74px;
+  padding-inline: 40px;
+
+
+}
+
+.about-container {
+  margin: auto;
+}
+
+.about-header h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #00f0ff;
+}
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  width: 30%;
+  margin: 10px auto 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(56, 227, 243, 0.3);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00f0ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 44px;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #00c0cc;
+}

@@ -1,0 +1,136 @@
+/* Flip Card Layout */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 420px;
+  perspective: 1000px;
+ 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+ 
+
+  
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  
+ 
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+    border: 1px solid cyan;
+
+  border-radius: 12px;
+}
+
+/* Projects Section */
+.projects-section {
+  padding-inline: 40px;
+  padding-top: 74px;
+  
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header .highlight {
+  color: cyan;
+}
+
+
+
+/* Grid */
+.projects-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+ row-gap: 48px;       /* Vertical gap */
+  column-gap: 24px;    /* Horizontal gap */
+}
+
+/* Card Styling */
+.project-card {
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  
+  
+}
+
+.project-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #595959;
+  margin-top: 12px;
+  text-align: justify;
+}
+
+.tech-tags {
+  margin-top: 12px;
+}
+
+.project-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.view-all {
+  margin-top: 60px;
+  text-align: center;
+}
+/* Animate on appear */
+.project-card-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

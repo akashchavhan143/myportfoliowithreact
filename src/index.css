@@ -1,0 +1,91 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Shared Notification Styles */
+.ant-notification-notice {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================== */
+/*        LIGHT THEME         */
+/* =========================== */
+html.light-theme .ant-notification-notice {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ede2e2;
+}
+
+html.light-theme .ant-notification-notice-message,
+html.light-theme .ant-notification-notice-description {
+  color: #000000 !important;
+}
+
+html.light-theme .ant-notification-notice .ant-btn {
+  color: #000000 !important;
+  border-color: #d9d9d9 !important;
+}
+
+/* Specific Icon Colors for Light Theme */
+html.light-theme .ant-notification-notice-success .anticon {
+  color: #52c41a !important; /* green */
+}
+
+html.light-theme .ant-notification-notice-error .anticon {
+  color: #ff4d4f !important; /* red */
+}
+
+html.light-theme .ant-notification-notice-warning .anticon {
+  color: #faad14 !important; /* orange */
+}
+
+html.light-theme .ant-notification-notice-info .anticon {
+  color: #1890ff !important; /* blue */
+}
+
+/* =========================== */
+/*        DARK THEME          */
+/* =========================== */
+html.dark-theme .ant-notification-notice {
+  background-color: #1f1f1f !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #434343;
+}
+
+html.dark-theme .ant-notification-notice-message,
+html.dark-theme .ant-notification-notice-description {
+  color: #f0f0f0 !important;
+}
+
+html.dark-theme .ant-notification-notice .ant-btn {
+  color: #f0f0f0 !important;
+  border-color: #595959 !important;
+}
+
+html.dark-theme .ant-notification-notice .anticon {
+  color: #f0f0f0 !important;
+}
+
+/* Specific Icon Colors for Dark Theme */
+html.dark-theme .ant-notification-notice-success .anticon {
+  color: #95de64 !important;
+}
+
+html.dark-theme .ant-notification-notice-error .anticon {
+  color: #ff7875 !important;
+}
+
+html.dark-theme .ant-notification-notice-warning .anticon {
+  color: #ffc53d !important;
+}
+
+html.dark-theme .ant-notification-notice-info .anticon {
+  color: #91caff !important;
+}

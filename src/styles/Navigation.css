@@ -1,0 +1,166 @@
+/* Navigation bar base */
+.navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #93a2e011;
+  transition: all 0.3s ease;
+}
+
+/* Scrolled shadow */
+.navigation.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1890ff;
+  text-decoration: none;
+}
+
+/* Desktop menu */
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* .nav-link {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+} */
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  position: relative;
+  padding-bottom: 4px;
+    font-size: 17px;
+  font-weight: 550;
+  transition: color 0.3s ease;
+}
+.nav-link.active{
+    color: #1890ff;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #18c1ff;
+  border-radius: 2px;
+
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: #1890ff;
+}
+
+
+
+/* Theme and mobile toggle buttons */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mobile-toggle {
+  display: none;
+}
+
+.theme-toggle,
+.mobile-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #666;
+}
+
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .mobile-toggle {
+  color: #ccc;
+}
+
+.theme-toggle:hover,
+.mobile-toggle:hover {
+  color: #1890ff;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  background-color: #fff;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  animation: slideDown 0.3s ease-out;
+}
+
+[data-theme="dark"] .mobile-menu {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+.mobile-link {
+  display: block;
+  padding: 0.75rem 0;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: #1890ff;
+}
+
+[data-theme="dark"] .mobile-link {
+  color: #ccc;
+}
+
+[data-theme="dark"] .mobile-link:hover {
+  color: #40a9ff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
