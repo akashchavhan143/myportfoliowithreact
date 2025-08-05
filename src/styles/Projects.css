@@ -4,7 +4,6 @@
   width: 100%;
   height: 420px;
   perspective: 1000px;
- 
 }
 
 .flip-card-inner {
@@ -17,9 +16,6 @@
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
- 
-
-  
 }
 
 .flip-card-front,
@@ -30,8 +26,6 @@
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  
- 
 }
 
 .flip-card-front {
@@ -41,7 +35,7 @@
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
-    border: 1px solid cyan;
+  border: 1px solid cyan;
 
   border-radius: 12px;
 }
@@ -50,7 +44,7 @@
 .projects-section {
   padding-inline: 40px;
   padding-top: 74px;
-  
+
 }
 
 .section-header {
@@ -62,16 +56,42 @@
   color: cyan;
 }
 
-
-
 /* Grid */
 .projects-grid {
-
   display: grid;
 
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
- row-gap: 48px;       /* Vertical gap */
-  column-gap: 24px;    /* Horizontal gap */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* max-width: 1600px;  */
+  margin: 0 auto;
+  row-gap: 48px; /* Vertical gap */
+  column-gap: 24px; /* Horizontal gap */
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+@media (min-width: 1300px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1299px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Card Styling */
@@ -82,8 +102,6 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  
-  
 }
 
 .project-img {

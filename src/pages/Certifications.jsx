@@ -1,6 +1,19 @@
 import React from "react";
-import { Card, Col, Row, Tag, Tooltip } from "antd";
-import { CheckCircleTwoTone, InfoCircleOutlined } from "@ant-design/icons";
+import { Col, Row, Tag, Tooltip } from "antd";
+
+import {
+ 
+ CheckCircleTwoTone,
+  InfoCircleOutlined,
+  FileDoneOutlined,
+  CodeOutlined,
+  BugOutlined,
+  DatabaseOutlined,
+  Html5Outlined,
+  
+  ApiOutlined,
+  PythonOutlined
+} from "@ant-design/icons";
 import "../styles/Certifications.css";
 
 const certifications = [
@@ -8,70 +21,94 @@ const certifications = [
     title: "Java Developer Certification",
     issuer: "QSpiders Hadapsar",
     date: "June 2024",
-    tag: "Java"
+    tag: "Java",
+    color: "#f16529",
+    icon: <CodeOutlined />
   },
   {
     title: "Manual Testing Certification",
     issuer: "QSpiders Hadapsar",
     date: "May 2024",
-    tag: "Testing"
+    tag: "Testing",
+    color: "#00a6ed",
+    icon: <BugOutlined />
   },
   {
     title: "SQL Certification",
     issuer: "QSpiders Hadapsar",
     date: "April 2024",
-    tag: "Database"
+    tag: "Database",
+    color: "#2965f1",
+    icon: <DatabaseOutlined />
   },
   {
     title: "Web Development Bootcamp",
     issuer: "Udemy",
     date: "March 2024",
-    tag: "Web Dev"
+    tag: "Web Dev",
+    color: "#42b883",
+    icon: <Html5Outlined />
   },
   {
     title: "React Mastery Course",
     issuer: "Coursera",
     date: "February 2024",
-    tag: "React"
+    tag: "React",
+    color: "#61dafb",
+    icon: <PythonOutlined />
   },
   {
     title: "Spring Boot Fundamentals",
     issuer: "Great Learning",
     date: "January 2024",
-    tag: "Backend"
-  },
+    tag: "Backend",
+    color: "#3c873a",
+    icon: <ApiOutlined />
+  }
 ];
+
 
 const Certifications = () => {
   return (
     <section id="certifications" className="certifications-section">
       <div className="cert-header">
         <h2>
-          🎓My <span className="highlight"> Certifications</span>
+          🎓My <span className="highlight">Certifications</span>
         </h2>
-        <div className="divider"></div>
+        <div className="divider" />
         <p className="cert-sub">Verified credentials from trusted platforms</p>
       </div>
 
-      <Row gutter={[24, 24]} >
+      <Row gutter={[24, 24]}>
         {certifications.map((cert, index) => (
-          <Col xs={24} sm={12} md={6} key={index}>
-            <Card
-            style={{textAlign: "center",justifyContent: "center"}}
-              className="cert-card fancy-hover"
-              hoverable
-            ><div className="cert-title" style={{textAlign: "center",justifyContent: "center"}}>
-                  {cert.title}
-                 
-                  <Tooltip title="Verified Certification">
-                    <CheckCircleTwoTone twoToneColor="#52c41a" style={{ marginLeft: 8 }} />
-                  </Tooltip>
-             </div>
-              <div className="divider"></div>
-              <p className="cert-meta"><InfoCircleOutlined /> <strong>Issuer:</strong> {cert.issuer}</p>
-              <p className="cert-meta"><strong>Date:</strong> {cert.date}</p>
-              <Tag color="geekblue" className="cert-tag">{cert.tag}</Tag>
-            </Card>
+          <Col xs={24} sm={12} md={8} lg={6} key={index}>
+            <div
+              className="animated-cert-card"
+              style={{ "--color": cert.color }}
+            >
+              <div className="cert-icon" style={{ color: cert.color }}>
+  {cert.icon}
+</div>
+              <div className="cert-title">
+                {cert.title}
+                
+              </div>
+              <p className="cert-meta">
+                <InfoCircleOutlined /> <strong>Issuer:</strong> {cert.issuer}
+              </p>
+              <p className="cert-meta">
+                <strong>Date:</strong> {cert.date}<Tooltip title="Verified Certification">
+                  <CheckCircleTwoTone
+                    twoToneColor="#52c41a"
+                    style={{ marginLeft: 8 }}
+                  />
+                </Tooltip>
+              </p>
+              
+              <Tag color="geekblue" className="cert-tag">
+                {cert.tag}
+              </Tag>
+            </div>
           </Col>
         ))}
       </Row>

@@ -26,35 +26,88 @@
   color: #666;
   font-style: italic;
 }
-
-.cert-card {
-  border-radius: 12px;
-border: 1px solid #00ffff2a;
-  transition: all 0.4s ease;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+.animated-cert-card {
+  --border-radius: 1rem;
+  --bg-color: #0e2231;
+  position: relative;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  text-align: center;
+  color: #fff;
+  background: var(--bg-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.cert-card:hover {
-  transform: translateY(-5px);
-  border: 1px solid #00ffffc4;
-        box-shadow: 0 10px 20px rgba(0, 240, 255, 0.2);
+.animated-cert-card::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(
+    var(--color) 0deg,
+    transparent 60deg,
+    transparent 180deg,
+    var(--color) 180deg,
+    transparent 240deg
+  );
+  inset: -50%;
+  z-index: -2;
+  animation: spin-border 5s linear infinite;
+}
+
+@keyframes spin-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-cert-card::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #081217;
+  border-radius: calc(var(--border-radius) - 4px);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.animated-cert-card:hover::before {
+  animation-play-state: paused;
+}
+
+.animated-cert-card:hover::after {
+  background: var(--bg-color);
+}
+
+.cert-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--color);
+}
+
+.cert-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .cert-meta {
-  margin: 8px 0;
-  color: #333;
+  color: #ccc;
+  font-size: 14px;
+  margin: 6px 0;
 }
 
 .cert-tag {
   margin-top: 12px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   font-weight: 500;
   font-size: 12px;
   border-radius: 20px;
-}
-
-.cert-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }

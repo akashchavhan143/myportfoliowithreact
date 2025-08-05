@@ -92,9 +92,9 @@ const Projects = () => {
       <div className="projects-grid">
         {visibleProjects.map((project, index) => (
           <div className="flip-card project-card-appear"  style={{ animationDelay: `${index * 0.1}s` }} key={index}>
-            <div className="flip-card-inner">
+            <div className="flip-card-inner" style={{}}>
               {/* Front Side */}
-              <div className="flip-card-front">
+              <div className="flip-card-front" style={{}}>
                 <Card
                   hoverable
                   className="project-card"
@@ -105,6 +105,7 @@ const Projects = () => {
                       className="project-img"
                     />
                   }
+               
                 >
                   <Card.Meta
                     title={project.title}

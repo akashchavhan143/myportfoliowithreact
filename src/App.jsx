@@ -16,8 +16,10 @@ import Projects from "./pages/Projects";
 import Event from "./pages/Event";
 import Navigation from "./components/Navigation";
 import Certifications from "./pages/Certifications";
+import Footer from "./pages/Footer";
+import AnimatedCard from "./Demo/AnimatedCard";
 
-const { Header, Content, Footer, Sider } = Layout;
+
 
 const App = () => {
   useEffect(() => {
@@ -55,8 +57,10 @@ const App = () => {
       <Certifications/>
       <Event />
       <Contact />
+    <AnimatedCard/>
+      
     </div>
-  
+    <Footer /> 
     </div>
   );
 };
