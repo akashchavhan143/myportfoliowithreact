@@ -27,10 +27,14 @@
 
 /* Logo */
 .nav-logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #1890ff;
+  
   text-decoration: none;
+}
+.nav-logo-icon {
+ color: #18d5ff;
+  
 }
 
 /* Desktop menu */
@@ -68,6 +72,7 @@
   border-radius: 2px;
 
   transition: width 0.3s ease;
+  
 }
 .nav-link:hover {
   color: #1890ff;

@@ -18,6 +18,9 @@ import Navigation from "./components/Navigation";
 import Certifications from "./pages/Certifications";
 import Footer from "./pages/Footer";
 import AnimatedCard from "./Demo/AnimatedCard";
+import DemoSection from "./Demo/DemoSection";
+import DeveloperLandingPage from "./Demo/DeveloperLandingPage";
+import PortfolioLandingPage from "./Demo/PortfolioLandingPage";
 
 
 
@@ -57,8 +60,10 @@ const App = () => {
       <Certifications/>
       <Event />
       <Contact />
-    <AnimatedCard/>
-      
+    {/* <AnimatedCard/> */}
+      <DemoSection />
+      <DeveloperLandingPage/>
+      <PortfolioLandingPage/>
     </div>
     <Footer /> 
     </div>

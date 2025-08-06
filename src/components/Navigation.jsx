@@ -60,9 +60,9 @@ const navMenuItems = navItems.map((item) => ({
   return (
     <nav className={`navigation ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
-        <a href="#home" className="nav-logo">
-        PORTFOLIO
-        </a>
+        <span href="#home" className="nav-logo">
+       PORT <span className="nav-logo-icon">FOLIO</span>
+        </span>
 
         <div className="nav-items">
           {navItems.map((item) => (

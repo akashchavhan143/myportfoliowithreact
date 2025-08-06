@@ -12,11 +12,25 @@ import {
   Html5Outlined,
   
   ApiOutlined,
-  PythonOutlined
+  PythonOutlined,
+  ConsoleSqlOutlined,
+  FireOutlined,
+  JavaScriptOutlined
 } from "@ant-design/icons";
 import "../styles/Certifications.css";
+import { DiReact } from "react-icons/di";
+import { SiSpringboot } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 const certifications = [
+    {
+  title: "Full Stack Java Development",
+  issuer: "QSpiders Hadapsar",
+  date: "August 2024",
+  tag: "Full Stack",
+  color: "#0b7285",
+  icon: <CodeOutlined />
+},
   {
     title: "Java Developer Certification",
     issuer: "QSpiders Hadapsar",
@@ -42,28 +56,45 @@ const certifications = [
     icon: <DatabaseOutlined />
   },
   {
-    title: "Web Development Bootcamp",
-    issuer: "Udemy",
-    date: "March 2024",
-    tag: "Web Dev",
-    color: "#42b883",
-    icon: <Html5Outlined />
-  },
-  {
-    title: "React Mastery Course",
-    issuer: "Coursera",
-    date: "February 2024",
-    tag: "React",
-    color: "#61dafb",
-    icon: <PythonOutlined />
-  },
+  title: "React Bootcamp",
+  issuer: "LetsUpgrade",
+  date: "July 2024",
+  tag: "React",
+  color: "#61dafb",
+  icon: <FaReact />
+},
+{
+  title: "HTML & CSS Zero to Hero (5 Days)",
+  issuer: "LetsUpgrade",
+  date: "June 2024",
+  tag: "HTML & CSS",
+  color: "#f16529",
+  icon: <Html5Outlined />
+},
+{
+  title: "JavaScript Zero to Hero (5 Days)",
+  issuer: "LetsUpgrade",
+  date: "June 2024",
+  tag: "JavaScript",
+  color: "#f7df1e",
+  icon: <JavaScriptOutlined />
+},
+{
+  title: "Python Programming BootCamp",
+  issuer: "LetsUpgrade",
+  date: "May 2024",
+  tag: "Python",
+  color: "#306998",
+  icon: <ConsoleSqlOutlined />
+},
+
   {
     title: "Spring Boot Fundamentals",
     issuer: "Great Learning",
     date: "January 2024",
     tag: "Backend",
     color: "#3c873a",
-    icon: <ApiOutlined />
+    icon: <SiSpringboot />
   }
 ];
 

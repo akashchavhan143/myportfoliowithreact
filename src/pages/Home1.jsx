@@ -118,12 +118,13 @@ const Home1 = () => {
               justifyContent: "center",
               marginTop: "20px",
             }}
+           
           >
             <div
               style={{
                 position: "relative",
                 width: "100%",
-                maxWidth: "500px", // or 80vw for mobile
+                maxWidth: "550px", // or 80vw for mobile
                 aspectRatio: "1", // maintain square
               }}
             >
