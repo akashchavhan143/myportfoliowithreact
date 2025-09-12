@@ -62,7 +62,7 @@ const Skills = () => {
         </div>
        <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div className="skill-card" key={index}>
+            <div className="skill-card" key={skill.name}>
               {skill.icon}
               <h3>{skill.name}</h3>
               <p>{skill.level}</p>

@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <h3 style={{marginTop:"100px",marginBottom:"20px"}}>Follow Me</h3>
+            <h3 className="follow-title">Follow Me</h3>
             <div className="social-links">
               <a href="https://github.com" target="_blank" rel="noreferrer">
                 <FaGithub />
@@ -92,9 +92,7 @@ const Contact = () => {
 
           <div className="contact-form">
             <Card variant="outlined"  >
-              <h2
-                style={{ textAlign: "center", color: "cyan", padding: "10px" }}
-              >
+              <h2 className="form-title">
                 Send Message
               </h2>
               <hr />

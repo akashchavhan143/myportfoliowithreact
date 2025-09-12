@@ -32,17 +32,17 @@ const styles = {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
   content: {
-    maxWidth: 600,
+    maxWidth: "600px",
   },
   name: {
     color: "#4dc8ff",
     fontSize: "2.5rem",
-    marginBottom: 4,
+    marginBottom: "4px",
   },
   role: {
     color: "#1d7ad9",
     fontStyle: "normal",
-    marginBottom: 12,
+    marginBottom: "12px",
   },
   description: {
     fontStyle: "italic",

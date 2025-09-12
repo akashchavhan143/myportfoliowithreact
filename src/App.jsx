@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 
-import useToken from "antd/es/theme/useToken";
+
 import { themes } from "./theme-config"; // Import your theme object
 import { useTheme } from "./ThemeContext";
 import Home1 from "./pages/Home1";
@@ -43,8 +43,6 @@ const App = () => {
   const { themeName } = useTheme();
   const currentTheme = themes[themeName];
   const token = currentTheme?.token || {};
-  console.log("Current Theme:", themeName, currentTheme);
-  console.log("Ant Design Token =====:", token.layoutHeaderBg);
   return (
 <div> 
      <Navigation />
@@ -60,10 +58,8 @@ const App = () => {
       <Certifications/>
       <Event />
       <Contact />
-    {/* <AnimatedCard/> */}
-      <DemoSection />
-      <DeveloperLandingPage/>
-      <PortfolioLandingPage/>
+    
+      
     </div>
     <Footer /> 
     </div>

@@ -10,18 +10,20 @@
 }
 
 .about-header h2 {
-  font-size: 36px;
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
+  color: var(--home-text);
 }
 
 .highlight {
-  color: #00f0ff;
+  color: var(--home-accent);
 }
 
 .section-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  background: linear-gradient(90deg, transparent, var(--home-accent), transparent);
   width: 30%;
   margin: 10px auto 30px;
 }
@@ -39,7 +41,11 @@
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 8px 24px rgba(56, 227, 243, 0.3);
+  box-shadow: 0 8px 24px rgba(100, 37, 199, 0.3);
+}
+
+html.dark-theme .about-image img {
+  box-shadow: 0 8px 24px rgba(0, 240, 255, 0.3);
 }
 
 .about-text {
@@ -52,14 +58,14 @@
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.7;
-  color: #333;
+  color: var(--home-text-secondary);
 }
 
 .btn-download {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #00f0ff;
-  color: #000;
+  background-color: var(--home-accent);
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 44px;
@@ -67,5 +73,6 @@
 }
 
 .btn-download:hover {
-  background-color: #00c0cc;
+  opacity: 0.8;
+  box-shadow: 0 0 10px var(--home-accent);
 }

@@ -3,7 +3,7 @@ import './AnimatedCard.css'; // Make sure this path is correct
 
 const AnimatedCard = () => {
   return (
-    <div className="container-animated ">
+    <div className="container-animated">
       <div className="card" style={{ "--color": "#ef476f" }}>
         <i className="fa-solid fa-code"></i>
         <div className="title">Web Development</div>

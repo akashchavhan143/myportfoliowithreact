@@ -8,6 +8,43 @@ html {
   scroll-behavior: smooth;
 }
 
+/* CSS Variables for Theme */
+:root {
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-text: #333;
+  --nav-text-hover: #1890ff;
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --home-bg: #ffffff;
+  --home-text: #333;
+  --home-text-secondary: #666;
+  --home-accent: #6425c7;
+  --home-glow: #6425c7;
+}
+
+html.light-theme {
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-text: #333;
+  --nav-text-hover: #6425c7;
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --home-bg: #ffffff;
+  --home-text: #333;
+  --home-text-secondary: #666;
+  --home-accent: #6425c7;
+  --home-glow: #6425c7;
+}
+
+html.dark-theme {
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  --nav-text: #e6f7ff;
+  --nav-text-hover: #00f5ff;
+  --nav-border: rgba(51, 65, 85, 0.3);
+  --home-bg: #111827;
+  --home-text: #e6f7ff;
+  --home-text-secondary: #d1d5db;
+  --home-accent: #00f0ff;
+  --home-glow: #00f0ff;
+}
+
 /* Shared Notification Styles */
 .ant-notification-notice {
   border-radius: 8px;
@@ -47,7 +84,7 @@ html.light-theme .ant-notification-notice-warning .anticon {
 }
 
 html.light-theme .ant-notification-notice-info .anticon {
-  color: #1890ff !important; /* blue */
+  color: #6425c7 !important; /* purple */
 }
 
 /* =========================== */

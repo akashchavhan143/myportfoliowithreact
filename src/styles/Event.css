@@ -4,11 +4,16 @@
   text-align: center;
 }
 
-.event-heading {
-  font-size: 2rem;
-  
-  margin-bottom: 50px;
-  color: #333;
+.about-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--home-text);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-header .highlight {
+  color: var(--home-accent);
 }
 
 /* Slider */
@@ -28,10 +33,11 @@
 .event-card {
   flex: 0 0 320px;
   margin: 0 10px;
-  border: 1px solid cyan;
+  border: 1px solid var(--home-accent);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--home-bg);
   position: relative;
 }
 
@@ -49,13 +55,13 @@
 .event-info h3 {
   margin: 0 0 8px;
   font-size: 16px;
-  color: #1890ff;
+  color: var(--home-accent);
 }
 
 .event-info p {
   margin: 0;
   font-size: 14px;
-  color: #555;
+  color: var(--home-text-secondary);
 }
 
 /* Animation */

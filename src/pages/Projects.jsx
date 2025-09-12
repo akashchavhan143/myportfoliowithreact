@@ -23,6 +23,24 @@ const projects = [
     codeUrl: "#",
   },
   {
+    title:"Farmer Mitra Survey Application",
+    description:
+      "A survey application for farmers to collect data on crop yield, soil health, and weather conditions, with a user-friendly interface and data visualization.",
+    image: "/placeholder.svg",
+    technologies: ["Spring Boot", "React", "AntD", "MySQL"],
+    liveUrl: "#",
+    codeUrl: "#",
+  },
+  {title: "FTP Polling Service",
+    description:
+      "A backend service that polls live data from an FTP server, processes it, and provides APIs for frontend consumption.",
+    image: "/placeholder.svg",
+    technologies: ["Spring Boot", "React", "AntD", "MySQL"],
+    liveUrl: "#",
+    codeUrl: "#",
+  },
+ 
+  {
     title: "Personal Portfolio Application",
     description:
       "A modern personal website showcasing skills and projects using HTML, CSS, and JavaScript with responsive design and interactive elements.",
@@ -39,14 +57,7 @@ const projects = [
     liveUrl: "#",
     codeUrl: "#",
   },
-  {
-    title: "Blog Application",  
-    description: "A blogging platform allowing users to create, edit, and comment on posts.",
-    image: "/placeholder.svg",
-    technologies: ["Spring Boot", "React", "Bootstrap", "MySQL"],
-    liveUrl: "#",
-    codeUrl: "#",
-  },
+  
   {
     title: "Task Management Application",
     description: "A task management tool for creating, updating, and deleting tasks with user authentication.",
@@ -55,23 +66,26 @@ const projects = [
     liveUrl: "#",
     codeUrl: "#",
   },
-  {
-    title: "Chat Application",
-    description: "A real-time chat application with user authentication and message history.",
-    image: "/placeholder.svg",
-    technologies: ["Spring Boot", "React", "WebSocket"],
-    liveUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Weather Application",
-    description: "A weather application fetching real-time weather data from an API.",
-    image: "/placeholder.svg",
-    technologies: ["React", "API Integration"],
-    liveUrl: "#",
-    codeUrl: "#",
-    },
-  
+ {
+  title:"Geo-Location Image Verification",  
+  description:
+    "A web application that verifies the geo-location of two images, ensuring they were taken at the same place.",
+  image: "/placeholder.svg",  
+  technologies: ["Spring Boot", "React", "AntD", "MySQL","javaScript"],
+  liveUrl: "#",
+  codeUrl: "#",
+ },
+ {
+title:"Student Management System",
+description:
+  "A comprehensive system for managing student records, including enrollment, grades, and attendance.",
+
+image: "/placeholder.svg",
+  technologies: ["Spring Boot", "React", "Ant Design", "MySQL"],
+  liveUrl: "#",
+  codeUrl: "#",
+},
+
 ];
 
 const Projects = () => {

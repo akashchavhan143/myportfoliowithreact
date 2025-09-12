@@ -2,7 +2,14 @@
   width: 40%; /* equivalent to w-1/3 */
   margin: 1rem auto; /* equivalent to mx-auto my-4 */
   height: 1px;
-  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  background: linear-gradient(90deg, transparent, var(--home-accent), transparent);
+}
+
+.section-divider {
+  width: 30%;
+  margin: 10px auto 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--home-accent), transparent);
 }
 
 .main-container {

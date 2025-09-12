@@ -52,7 +52,11 @@ useEffect(() => {
 const navMenuItems = navItems.map((item) => ({
   key: item.href,
   label: (
-    <a href={item.href} onClick={() => setIsOpen(false)}>
+    <a 
+      href={item.href} 
+      onClick={() => setIsOpen(false)}
+      className={activeSection === item.href ? "active-drawer-link" : "drawer-link"}
+    >
       {item.label}
     </a>
   ),
@@ -87,13 +91,39 @@ const navMenuItems = navItems.map((item) => ({
 
 
         <Drawer
-        title="Menu"
+        title={<span className="drawer-title">Menu</span>}
         placement="right"
-        onClose={() => setIsOpen(!isOpen)}
+        onClose={() => setIsOpen(false)}
         open={isOpen}
-        width={200}
+        width={250}
+        className="nav-drawer"
+        styles={{
+          body: { padding: 0 },
+          header: { 
+            backgroundColor: 'var(--home-bg)',
+            borderBottom: '1px solid var(--nav-border)',
+            color: 'var(--home-text)'
+          }
+        }}
       >
-        <Menu mode="vertical" items={navMenuItems} onClick={() => setIsOpen(!isOpen)}  style={{background:"transparent",border:"none"}} />
+        <div className="drawer-content">
+          <Menu 
+            mode="vertical" 
+            items={navMenuItems} 
+            onClick={() => setIsOpen(false)}
+            selectedKeys={[activeSection]}
+            className="drawer-menu"
+          />
+          <div className="drawer-theme-toggle">
+            <button
+              className="drawer-theme-btn"
+              onClick={handleThemeChange}
+            >
+              {themeName === "light" ? <MoonOutlined /> : <SunOutlined />}
+              <span>{themeName === "light" ? "Dark Mode" : "Light Mode"}</span>
+            </button>
+          </div>
+        </div>
       </Drawer>
     </nav>
   );

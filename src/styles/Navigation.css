@@ -4,9 +4,9 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #93a2e011;
+  border-bottom: 1px solid var(--nav-border);
   transition: all 0.3s ease;
 }
 
@@ -29,12 +29,11 @@
 .nav-logo {
   font-size: 2rem;
   font-weight: bold;
-  
+  color: var(--nav-text);
   text-decoration: none;
 }
 .nav-logo-icon {
- color: #18d5ff;
-  
+  color: var(--home-accent);
 }
 
 /* Desktop menu */
@@ -51,15 +50,15 @@
 } */
 .nav-link {
   text-decoration: none;
-  color: #666;
+  color: var(--nav-text);
   position: relative;
   padding-bottom: 4px;
-    font-size: 17px;
+  font-size: 17px;
   font-weight: 550;
   transition: color 0.3s ease;
 }
 .nav-link.active{
-    color: #1890ff;
+  color: var(--nav-text-hover);
 }
 .nav-link.active::after {
   content: "";
@@ -68,14 +67,12 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #18c1ff;
+  background-color: var(--home-accent);
   border-radius: 2px;
-
   transition: width 0.3s ease;
-  
 }
 .nav-link:hover {
-  color: #1890ff;
+  color: var(--nav-text-hover);
 }
 
 
@@ -96,52 +93,35 @@
   border: none;
   font-size: 1.25rem;
   cursor: pointer;
-  color: #666;
-}
-
-[data-theme="dark"] .theme-toggle,
-[data-theme="dark"] .mobile-toggle {
-  color: #ccc;
+  color: var(--nav-text);
+  transition: color 0.3s ease;
 }
 
 .theme-toggle:hover,
 .mobile-toggle:hover {
-  color: #1890ff;
+  color: var(--nav-text-hover);
 }
 
 /* Mobile menu */
 .mobile-menu {
   display: none;
-  background-color: #fff;
+  background-color: var(--nav-bg);
   padding: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--nav-border);
   animation: slideDown 0.3s ease-out;
-}
-
-[data-theme="dark"] .mobile-menu {
-  background-color: #1f1f1f;
-  border-color: #333;
 }
 
 .mobile-link {
   display: block;
   padding: 0.75rem 0;
-  color: #555;
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .mobile-link:hover {
-  color: #1890ff;
-}
-
-[data-theme="dark"] .mobile-link {
-  color: #ccc;
-}
-
-[data-theme="dark"] .mobile-link:hover {
-  color: #40a9ff;
+  color: var(--nav-text-hover);
 }
 
 /* Mobile styles */
@@ -156,6 +136,104 @@
   .mobile-toggle {
     display: block;
   }
+}
+
+/* Drawer Styles */
+.nav-drawer .ant-drawer-content {
+  background-color: var(--home-bg) !important;
+}
+
+.nav-drawer .ant-drawer-header {
+  background-color: var(--home-bg) !important;
+  border-bottom: 1px solid var(--nav-border) !important;
+}
+
+.drawer-title {
+  color: var(--home-text) !important;
+  font-weight: 600;
+}
+
+.drawer-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--home-bg);
+  padding: 0 16px;
+}
+
+.drawer-menu {
+  flex: 1;
+  background: transparent !important;
+  border: none !important;
+}
+
+.drawer-menu .ant-menu-item {
+  background: transparent !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 12px 16px !important;
+  height: auto !important;
+}
+
+.drawer-menu .ant-menu-item:hover {
+  background-color: rgba(100, 37, 199, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+html.dark-theme .drawer-menu .ant-menu-item:hover {
+  background-color: rgba(0, 240, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.drawer-menu .ant-menu-item-selected {
+  background-color: rgba(100, 37, 199, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+html.dark-theme .drawer-menu .ant-menu-item-selected {
+  background-color: rgba(0, 240, 255, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+.drawer-link,
+.active-drawer-link {
+  color: var(--home-text) !important;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.active-drawer-link {
+  color: var(--home-accent) !important;
+  font-weight: 600;
+}
+
+.drawer-theme-toggle {
+  padding: 20px;
+  border-top: 1px solid var(--nav-border);
+  margin-top: auto;
+}
+
+.drawer-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--home-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drawer-theme-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 /* Animation */

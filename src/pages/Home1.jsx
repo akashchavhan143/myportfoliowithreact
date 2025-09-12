@@ -128,15 +128,16 @@ const Home1 = () => {
                 aspectRatio: "1", // maintain square
               }}
             >
-              {/* Abstract Cyan Shape */}
+              {/* Abstract Shape */}
               <div
+                className="profile-shape"
                 style={{
                   position: "absolute",
                   top: "6%",
                   left: "6%",
                   width: "88%",
                   height: "88%",
-                  backgroundColor: "cyan",
+                  backgroundColor: "var(--home-accent)",
                   borderRadius: "60% 40% 45% 55% / 55% 60% 40% 45%",
                   filter: "blur(0px)",
                   zIndex: 1,

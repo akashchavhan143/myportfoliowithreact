@@ -32,20 +32,20 @@
 }
 
 .glow {
-  color: #00e6f6;
-  text-shadow: 0 0 10px #363e3e, 0 0 20px #0dbfcc;
+  color: var(--home-glow);
+  text-shadow: 0 0 10px var(--home-glow), 0 0 20px var(--home-glow);
 }
 
 .subtitle {
   font-size: 1.8rem;
-  color: #00d4ff  ;
+  color: var(--home-accent);
   margin-bottom: 1rem;
 }
 
 .description {
   font-size: 1rem;
   line-height: 1.6;
-  color: #cccccc;
+  color: var(--home-text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -56,46 +56,54 @@
 }
 
 .glow-btn {
-  background-color: #00e6f6 !important;
+  background-color: var(--home-accent) !important;
   border: none;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 10px #00e6f6, 0 0 20px #00e6f6;
+  box-shadow: 0 0 10px var(--home-accent), 0 0 20px var(--home-accent);
 }
 
 .border-cyan {
-  border: 1.5px solid #00e6f6 !important;
-  color: #00e6f6 !important;
+  border: 1.5px solid var(--home-accent) !important;
+  color: var(--home-accent) !important;
   font-weight: 600;
 }
 
 .border-cyan:hover {
-  background-color: rgba(0, 230, 246, 0.1);
-  box-shadow: 0 0 10px #00e6f6;
+  background-color: rgba(100, 37, 199, 0.1);
+  box-shadow: 0 0 10px var(--home-accent);
+}
+
+html.dark-theme .border-cyan:hover {
+  background-color: rgba(0, 240, 255, 0.1);
 }
 
 .social-icons {
   display: flex;
   gap: 1.5rem;
   font-size: 1.5rem;
-  color: #00e6f6;
+  color: var(--home-accent);
+}
+
+.social-icons svg {
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .social-icons svg:hover {
-  color: #ffffff;
+  color: var(--home-text);
   transform: scale(1.2);
-  transition: all 0.3s ease;
 }
 
 .profile-pic-container {
-  background-color: #00fff7;
- /* Elliptical border radius: horizontal radius / vertical radius */
-/* Each corner: top-left, top-right, bottom-right, bottom-left */
-border-radius: 20% 40% 60% 30% / 30% 50% 30% 190%;
+  background-color: var(--home-accent);
+  /* Elliptical border radius: horizontal radius / vertical radius */
+  /* Each corner: top-left, top-right, bottom-right, bottom-left */
+  border-radius: 20% 40% 60% 30% / 30% 50% 30% 190%;
   padding: 1rem;
   width: 320px;
   height: 320px;

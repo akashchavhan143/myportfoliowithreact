@@ -5,10 +5,16 @@ import { themes } from "./theme-config";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [themeName, setThemeName] = useState("dark");
+  const [themeName, setThemeName] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    return saved || 'dark';
+  });
 
   const changeTheme = (name) => {
-    if (themes[name]) setThemeName(name);
+    if (themes[name]) {
+      setThemeName(name);
+      localStorage.setItem('theme', name);
+    }
   };
 
   const currentTheme = themes[themeName];
@@ -40,4 +46,10 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
