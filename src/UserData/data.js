@@ -1,8 +1,10 @@
 // src/data/portfolioData.js
 // src/data/skills.js
+import { useState } from "react";
 import { FaJava, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiSpringboot, SiJavascript, SiMysql } from "react-icons/si";
 export const about = {
+
   name: "Akash Chavhan",
   role: "Full Stack Developer",
   description: "I build web applications using React and Spring Boot.",
