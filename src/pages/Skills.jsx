@@ -30,23 +30,18 @@ const skills = [
   { icon: <FaCss3Alt className="icon blue" />, name: "CSS3", level: "Advanced" },
   { icon: <FaJs className="icon yellow" />, name: "JavaScript", level: "Advanced" },
   { icon: <FaReact className="icon cyan" />, name: "React", level: "Advanced" },
- 
-
-
-  { icon: <FaGitAlt className="icon orange-dark" />, name: "Git", level: "Advanced" },
+  { icon: <FaBootstrap className="icon purple" />, name: "Bootstrap", level: "Advanced" },
+  { name: "Ant Design", icon: <SiAntdesign className="icon pink" />, level: "Advanced" },
   { icon: <FaJava className="icon blue-dark" />, name: "Java", level: "Advanced" },
   { icon: <FaPython className="icon blue" />, name: "Python", level: "Intermediate" },
-  { icon: <FaBootstrap className="icon purple" />, name: "Bootstrap", level: "Advanced" },
+  { name: "Spring Boot", icon: <SiSpringboot className="icon green-dark" />, level: "Advanced" },
+  { name: "SQL", icon: <SiMysql className="icon blue-light" />, level: "Advanced" },
+  { name: "Manual Testing", icon: <SiTestinglibrary className="icon purple" />, level: "Advanced" },
+  { icon: <FaGitAlt className="icon orange-dark" />, name: "Git", level: "Advanced" },
   { icon: <FaGithub className="icon gray" />, name: "GitHub", level: "Advanced" },
-
   { icon: <FaAws className="icon orange" />, name: "AWS", level: "Beginner" },
   { icon: <FaDocker className="icon blue" />, name: "Docker", level: "Intermediate" },
-   { name: "Jenkins", icon: <FaJenkins className="icon red-dark" />, level: "Intermediate" },
-  { name: "Ant Design", icon: <SiAntdesign className="icon pink" />, level: "Advanced" },
- { name: "Spring Boot", icon: <SiSpringboot className="icon green-dark" />, level: "Advanced" },
-  
-  { name: "Manual Testing", icon: <SiTestinglibrary className="icon purple" />, level: "Advanced" },
-  { name: "SQL", icon: <SiMysql className="icon blue-light" />, level: "Advanced" },
+  { name: "Jenkins", icon: <FaJenkins className="icon red-dark" />, level: "Intermediate" },
   { name: "Mathematics", icon: <GiCalculator className="icon purple" />, level: "Strong Foundation" }
 ];
 const Skills = () => {
@@ -60,8 +55,8 @@ const Skills = () => {
           <div className="divider"></div>
           <p>Technologies I work with</p>
         </div>
-       <div className="skills-grid">
-          {skills.map((skill, index) => (
+        <div className="skills-grid">
+          {skills.map((skill) => (
             <div className="skill-card" key={skill.name}>
               {skill.icon}
               <h3>{skill.name}</h3>

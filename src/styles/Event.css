@@ -18,27 +18,55 @@
 
 /* Slider */
 .event-slider {
-    margin-top: 50px;
-  overflow: hidden;
+  margin-top: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
   width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+}
+
+.event-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .event-track {
   display: flex;
-  width: calc(250px * 8); /* 4 events x2 */
+  width: calc(340px * 8);
+  gap: 20px;
+  padding: 0 20px;
   animation: scroll 20s linear infinite;
 }
 
 .event-card {
   flex: 0 0 320px;
-  margin: 0 10px;
   border: 1px solid var(--home-accent);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   background-color: var(--home-bg);
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.event-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .event-image {
@@ -64,12 +92,4 @@
   color: var(--home-text-secondary);
 }
 
-/* Animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+

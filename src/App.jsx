@@ -22,7 +22,17 @@ import DemoSection from "./Demo/DemoSection";
 import DeveloperLandingPage from "./Demo/DeveloperLandingPage";
 import PortfolioLandingPage from "./Demo/PortfolioLandingPage";
 
+import { HomeOutlined, UserOutlined, ProjectOutlined, ReadOutlined, StarOutlined, CalendarOutlined, MailOutlined } from "@ant-design/icons";
 
+const navItemsForBottom = [
+  { href: "#home", icon: <HomeOutlined /> },
+  { href: "#about", icon: <UserOutlined /> },
+  { href: "#projects", icon: <ProjectOutlined /> },
+  { href: "#skills", icon: <ReadOutlined /> },
+  { href: "#certifications", icon: <StarOutlined /> },
+  { href: "#events", icon: <CalendarOutlined /> },
+  { href: "#contact", icon: <MailOutlined /> },
+];
 
 const App = () => {
   useEffect(() => {
@@ -52,16 +62,14 @@ const App = () => {
       {/* <Navbar /> */}
       <Home1 />
       <About />
-     
       <Projects />
       <SkillsSection />
       <Certifications/>
       <Event />
       <Contact />
-    
-      
     </div>
     <Footer /> 
+
     </div>
   );
 };

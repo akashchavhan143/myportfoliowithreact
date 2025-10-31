@@ -1,6 +1,8 @@
 // src/components/Navigation.js
 import { useState, useEffect } from "react";
 import { MenuOutlined, CloseOutlined, MoonOutlined, SunOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined, ProjectOutlined, ReadOutlined, StarOutlined, CalendarOutlined, MailOutlined } from "@ant-design/icons";
+
 import "../styles/Navigation.css";
 import { useTheme } from "../ThemeContext";
 import { Drawer, Menu } from "antd";
@@ -49,6 +51,16 @@ useEffect(() => {
    
     { href: "#contact", label: "Contact" },
   ];
+  
+const navItemsForBottom = [
+  { href: "#home", icon: <HomeOutlined /> },
+  { href: "#about", icon: <UserOutlined /> },
+  { href: "#projects", icon: <ProjectOutlined /> },
+  { href: "#skills", icon: <ReadOutlined /> },
+  { href: "#certifications", icon: <StarOutlined /> },
+  { href: "#events", icon: <CalendarOutlined /> },
+  { href: "#contact", icon: <MailOutlined /> },
+];
 const navMenuItems = navItems.map((item) => ({
   key: item.href,
   label: (
@@ -125,6 +137,7 @@ const navMenuItems = navItems.map((item) => ({
           </div>
         </div>
       </Drawer>
+
     </nav>
   );
 };

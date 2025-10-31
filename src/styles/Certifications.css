@@ -39,6 +39,11 @@
   border: 1px solid var(--nav-border);
   overflow: hidden;
   isolation: isolate;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 html.dark-theme .animated-cert-card {
@@ -125,4 +130,5 @@ html.dark-theme .cert-meta {
   font-weight: 500;
   font-size: 12px;
   border-radius: 20px;
+  text-align: center;
 }

@@ -9,6 +9,12 @@ import {
 import profileimg from "../assets/imag3.png";
 import "../styles/Home.css"; // Assuming you have a CSS file for styling
 const Home1 = () => {
+  const socials = [
+  { icon: <GithubOutlined />, url: "https://github.com/akashchavhan143" },
+  { icon: <LinkedinOutlined />, url: "https://www.linkedin.com/in/akash-chavhan280516" },
+  { icon: <TwitterOutlined />, url: "https://twitter.com/your-username" },
+  { icon: <InstagramOutlined />, url: "https://instagram.com/akashchavhan_16" },
+];
   return (
     <div id="home" className="home-section">
       {/* tow equal section for image and  text horizonta for destonand  vertical for phone */}
@@ -41,18 +47,30 @@ const Home1 = () => {
             </p>
 
             <div className="home-buttons" style={{ marginTop: "20px" }}>
-              <Button type="primary" size="large" className="glow-btn">
+             
+              <Button type="primary" href="#projects" size="large" className="glow-btn"  onClick={() => navigate("/projects")} >
                 View My Work
               </Button>
-              <Button type="default" size="large" className="border-cyan">
+            
+              
+              <Button type="default" href="#contact" size="large" className="border-cyan">
                 Contact Me
               </Button>
+              
             </div>
             <div className="social-icons">
-              <GithubOutlined />
-              <LinkedinOutlined />
-              <TwitterOutlined />
-              <InstagramOutlined />
+              
+             {socials.map((s, i) => (
+    <a
+      key={i}
+      href={s.url}
+      target="_blank"
+      rel="noopener noreferrer"
+     style={{color:"inherit"}}
+    >
+      {s.icon}
+    </a>
+  ))}
             </div>
           </div>
         </Col>
