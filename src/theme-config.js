@@ -25,6 +25,12 @@ export const themes = {
         "radial-gradient(circle farthest-corner at .5% 97.2%, #d1c1e0 0, #e6d1ff 100.2%)",
     },
     components: {
+      Button: {
+        defaultBorderColor: "#6425c7",
+        defaultColor: "#6425c7",
+        defaultHoverBorderColor: "#6425c7",
+        defaultHoverColor: "#6425c7",
+      },
       Menu: {
         itemSelectedBg: "#800080",
         itemSelectedColor: "#ffffff",
@@ -75,6 +81,12 @@ export const themes = {
       layoutHeaderTextColor: "#e6f7ff",
     },
     components: {
+      Button: {
+        defaultBorderColor: "#00f0ff",
+        defaultColor: "#00f0ff",
+        defaultHoverBorderColor: "#00f0ff",
+        defaultHoverColor: "#00f0ff",
+      },
       Menu: {
         itemSelectedBg: "#00f5ff",
         itemSelectedColor: "#0f172a",
